@@ -4,10 +4,10 @@
   gather_facts: False
   tags: provisioning
   vars:
-    keypair: project.pem
+    keypair: project
     instance_type: t2.medium
     instance_name: Kube_server
-    image: ami-0866a3c8686eaeeba
+    image:  ami-0866a3c8686eaeeba
     wait: yes
     group: webserver
     region: us-east-1
@@ -17,7 +17,7 @@
   - name: configuring security group for the instance
     ec2_group:
         name: "{{ security_group }}"
-        description: Kube_server_group
+        description: launch-wizard-2 created 2024-11-19T10:37:44.370Z
         region: "{{ region }}"
         rules:
             - proto: tcp
