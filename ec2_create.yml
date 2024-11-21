@@ -5,8 +5,8 @@
   tags: provisioning
   vars:
     keypair: project
-    instance_type: t2.medium
-    instance_name: Kube_server
+    instance_type: t2.micro
+    instance_name: server_1
     image:  ami-0866a3c8686eaeeba
     wait: yes
     group: webserver
