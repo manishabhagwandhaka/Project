@@ -43,7 +43,6 @@
         instance_type: "{{ instance_type}}"
         image_id: "{{ image }}"
         region: "{{ region }}"
-        number_of_instances: 3
         wait_timeout: 3
       
         
