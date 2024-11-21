@@ -5,11 +5,11 @@
   tags: provisioning
   vars:
     keypair: project
-    instance_type: t2.micro
+    instance_type: t2.medium
     image:  ami-0866a3c8686eaeeba
     wait: yes
     group: webserver
-    instance_name: server
+    instance_name: kube_server
     region: us-east-1
     security_group: launch-wizard-2
 
