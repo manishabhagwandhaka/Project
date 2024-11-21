@@ -12,6 +12,7 @@
     instance_name: kube_server
     region: us-east-1
     security_group: launch-wizard-2
+    ec2_instance_count: 3
 
   tasks:
   - name: configuring security group for the instance
@@ -43,6 +44,7 @@
         instance_type: "{{ instance_type}}"
         image_id: "{{ image }}"
         region: "{{ region }}"
+        count: "{{ ec2_instance_count }}"
         wait_timeout: 3
       
         
