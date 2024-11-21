@@ -6,7 +6,6 @@
   vars:
     keypair: project
     instance_type: t2.micro
-    instance_name: server_1
     image:  ami-0866a3c8686eaeeba
     wait: yes
     group: webserver
@@ -38,9 +37,34 @@
   - name: creating ec2 instance
     ec2_instance:
         security_group: "{{ security_group }}"
-        name: "{{ instance_name }}"
+        name: server_1
         key_name: "{{ keypair }}"
         instance_type: "{{ instance_type}}"
         image_id: "{{ image }}"
         region: "{{ region }}"
         wait_timeout: 3
+    ec2_instance:
+        security_group: "{{ security_group }}"
+        name: server_2
+        key_name: "{{ keypair }}"
+        instance_type: "{{ instance_type}}"
+        image_id: "{{ image }}"
+        region: "{{ region }}"
+        wait_timeout: 3
+    ec2_instance:
+        security_group: "{{ security_group }}"
+        name: server_2
+        key_name: "{{ keypair }}"
+        instance_type: "{{ instance_type}}"
+        image_id: "{{ image }}"
+        region: "{{ region }}"
+        wait_timeout: 3
+    ec2_instance:
+        security_group: "{{ security_group }}"
+        name: kube_server
+        key_name: "{{ keypair }}"
+        instance_type: t2.medium
+        image_id: "{{ image }}"
+        region: "{{ region }}"
+        wait_timeout: 3    
+        
