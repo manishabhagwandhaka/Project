@@ -1,0 +1,28 @@
+
+body {
+    background-image: url("crick1.png" );
+    background-repeat: no-repeat;
+    background-size: 180% 180%;
+
+    
+  }
+  table {
+    border-color: white; /* Sets the border color to blue */
+  }
+  /* .airplane {
+    position: absolute;
+    top: 50px;
+    left: -100px;
+    animation: fly 10s linear infinite;
+  } */
+  
+
+  /* .stadium1 {
+    background-image: url("airoplane.png");
+    width: 10px;
+    height: 10px;
+  } */
+
+
+
+
