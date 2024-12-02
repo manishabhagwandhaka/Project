@@ -6,13 +6,19 @@
   gather_facts: False
   tags: provisioning
   tasks:
+    - name: Update apt cache
+      ansible.builtin.apt:
+        update_cache: yes
+    
     - name: Install apache2 package
-      apt:
+      ansible.builtin.apt:
         name: apache2
         state: present
 
-    - name: Ensure httpd service is enabled
-      service:
+    - name: Ensure apache2 service is running
+      ansible.builtin.systemd:
         name: apache2
         state: started
         enabled: yes
+    
+    
