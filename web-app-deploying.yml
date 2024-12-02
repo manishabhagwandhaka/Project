@@ -11,8 +11,10 @@
         path: /var/www/html/index.html
         state: absent 
     - name: Deploying web application on server
-      copy:
+      ansible.builtin.copy:
        src: /home/ubuntu/cricket
        dest: /var/www/html/
+       remote_src: no
+       recurse: yes
        
       
